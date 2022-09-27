@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Aaromal Anil</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="styesheet" href="styles.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script
+      src="https://kit.fontawesome.com/c4254e24a8.js"
+      crossorigin="anonymous"
+    ></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Aaromal Anil</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="generic.html">EDUCATION</a></li>
+							<li ><a href="elements.html">WORKS</a></li>
+                            <li class="active"><a href="form.html">CONNECT</a></li>
+                            <li ><a href="contact.html">CONTACT</a></li>
+                            <li ><a href="skills.html">SKILLS</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://twitter.com/aaromalanil001" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com/aaromal.anil.16" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://www.instagram.com/aaromalanil001" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://github.com/AAROMAL-ANIL-001"target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+                    <!--form-->
+
+                    <footer id="footer">
+                        <section>
+                          <div class="container-fluid">
+                            <form id="submit-form">
+                              <i class="fas fa-paper-plane"></i>
+                
+                              <div class="input-group">
+                                <label>Full Name</label>
+                                <input
+                                  type="text"
+                                  placeholder="Enter your name"
+                                  id="contact-name"
+                                  onkeyup="validateName()"
+                                  name="Name"
+                                >
+                                <span id="name-error"></span>
+                              </div>
+                
+                              <div class="input-group">
+                                <label>Phone No.</label>
+                                <input
+                                  type="tel"
+                                  placeholder="123 456 7890"
+                                  id="contact-phone"
+                                  onkeyup="validatePhone()"
+                                  name="PhoneNo"
+                                />
+                                <span id="phone-error"></span>
+                              </div>
+                
+                              <div class="input-group">
+                                <label>Email Id</label>
+                                <input
+                                  type="email"
+                                  placeholder="Enter Email"
+                                  id="contact-email"
+                                  onkeyup="validateEmail()"
+                                  name="EmailId"
+                                />
+                                <span id="email-error"></span>
+                              </div>
+                
+                              <div class="input-group">
+                                <label>Your Message</label>
+                                <textarea
+                                  rows="5"
+                                  placeholder="Enter your message"
+                                  id="contact-message"
+                                  onkeyup="validateMessage()"
+                                  name="Message"
+                                ></textarea>
+                                <span id="message-error"></span>
+                              </div>
+                
+                              <button type="submit" onclick="return validateForm()"  value="submit" class="sub">
+                                Submit
+                              </button>
+                              <span id="submit-error"></span>
+                            </form>
+                          </div>
+                        </section>
+                        
+                      </footer>
+
+
+
+
+
+				
+<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+      <script src="script1.js"></script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbycpZ-rSpqaASGFjijpvE3rL9fN8ydvtj6H-f4j-j_CxqoEhz9226H3c3TRV2YN35df_Q/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+
+	</body>
+</html>
